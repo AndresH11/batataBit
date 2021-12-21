@@ -1,0 +1,863 @@
+/*
+1. posicionamiento
+2. modelo caja (box model)
+3. tipografia
+4. visuales
+5. otros
+*/
+:root{
+    /*Colores*/
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black:  #201E1C;
+    --black:#282623;
+    --grey: #BABABA;
+    --off-white:  #FAF8F7;
+    --just-white:  #FFFFFF;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+header{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+header .header-title-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+}
+header h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+header p{
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+header .header-button{
+    position: absolute;
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding:15px;
+    width: 229px;
+    height: 48px;
+    background: var(--off-white);
+    color: var(--warm-black);
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    font-weight: 700;
+    font-size: 1.4rem;
+    left: calc(50% - 118px);
+}
+header .header-button span{
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("../iconos/flechaabajo.svg");
+}
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+main .main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+main .main-exchange-container-title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+main .main-exchange-container-title h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+main .main-exchange-container-title p{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+    margin-top: 24px;
+}
+main .background-img{
+    width: 195px;
+    height: 195px;
+    margin: 0 auto;
+    background-image: url("../imagenes/Bitcoin.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+
+/*TABLA DE MONEDAS*/
+main .main-tables-container{
+    display: flex;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+}
+main .main-currency-table{
+    width: 80%;
+    height: 360px;
+    min-height: 235px;
+    max-width: 500px;
+    margin: 0 6rem;
+    font-family: "Inter", sans-serif;
+}
+main .main-currency-table .cunrrency-table-title{
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 23.44px;
+    color: #FF9536;
+    margin-bottom: 1.2rem;
+}
+main .currency-table-container{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+main .currency-table-container table{
+    width: 100%;
+    height: 100%;
+}
+main .currency-table-container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+main .currency-table-container .table__top_left{
+    border-radius: 15px 0 0 0;
+}
+main .currency-table-container .table__bottom-left{
+    border-radius: 0 0 0 15px;
+}
+main .currency-table-container .table__bottom-right{
+    border-radius: 0 0 15px 0;
+}
+main .currency-table-container .table__top_rigth{
+    border-radius: 0 15px 0 0;
+}
+main table .table__right{
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #757575;
+    line-height: 1.7rem;
+}
+main .main-currency-table .currency-table-date{
+    width: 80%;
+    height: 3.1rem;
+    margin: 0 auto;
+    max-width: 240px;
+    min-width: 184px;
+    background-color: var(--soft-orange);
+    border-radius: 1rem;
+    margin-top: 1.6rem;
+    padding: 0.8rem;
+}
+main .main-currency-table .currency-table-date p{
+    color: var(--warm-black);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+main .main-currency-table .currency-table-date p b{
+    color: var(--warm-black);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+main .currency-table-container .down{
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 10.5px;
+    background-image: url("../iconos/tradingBaja.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .currency-table-container .up{
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 10.5px;
+    background-image: url("../iconos/tradingAlto.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*TABLA DE COMISIONES*/
+
+main .main-container-tabla-2 .comisiones{
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    margin-bottom: 1.2rem;
+}
+main .main-container-tabla-2{
+    width: 80%;
+    height: 360px;
+    margin: 0 auto;
+    margin-right: 5rem;
+    max-width: 500px;
+    min-height: 235px;
+}
+.main-container-tabla-2 .second-container-tabla-2{
+    width: 90%;
+    margin: 0 auto;
+    height: 250px;
+    min-width: 230px;
+    max-width: 300px;
+}
+main .main-container-tabla-2 .second-container-tabla-2 td{
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #B5B0AC;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    background-color: var(--just-white);
+}
+main .main-container-tabla-2 .second-container-tabla-2 .table__top_left-2{
+    border-radius: 1rem 0 0 0;
+}
+main .main-container-tabla-2 .second-container-tabla-2 .table__top_rigth-2{
+    border-radius: 0 1rem 0 0;
+}
+main .main-container-tabla-2 .second-container-tabla-2 .table__bottom-left-2{
+    border-radius: 0 0 0 1rem;
+}
+main .main-container-tabla-2 .second-container-tabla-2 .table__bottom-right-2{
+    border-radius: 0 0 1rem 0;
+}
+main .main-container-tabla-2 .second-container-tabla-2 .table__right-2{
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color:#757575;
+}
+main .main-actualizacion-2{
+    margin: 0 auto;
+    width: 80%;
+    height: 3.1rem;
+    padding: 0.8rem;
+    background-color: var(--soft-blue);
+    max-width: 240px;
+    min-width: 184px;
+    border-radius: 1rem;
+    margin-top: 1.6rem;
+}
+main .main-actualizacion-2 p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: var(--warm-black);
+    font-family: "inter", sans-serif;
+}
+main .main-actualizacion-2 p b{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    color: var(--black);
+    font-family: "inter", sans-serif;
+}
+
+/*BENEFICIOS*/
+
+main .main-product-detail{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    position: relative;
+    padding: 0 1.6rem;
+    padding-top: 6.4rem;
+    padding-bottom: 4.7rem;
+    background-color: var(--warm-black);
+
+}
+main .prodcut-detail-batata-logo{
+    position: absolute;
+    width: 3.7rem;
+    height: 2.4rem;
+    background-image: url(../iconos/primerapapa.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -1.2rem;
+    left: calc(50% - 2rem);
+}
+main .product-detail-title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+main .product-detail-title h2{
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    margin-bottom: 2.4rem;
+}
+main .product-detail-title p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+    margin-bottom: 3.2rem;
+}
+main .product-cards-container{
+    max-width: 40rem;
+    min-width: 28.8rem;
+    margin: 0 auto;
+}
+main .product-cards-container .product-detail-card{
+    position: relative;
+    width: 100%;
+    height: 152px;
+    padding-top: 4.8rem;
+    padding-left: 1.6rem;
+    background-color: var(--black);
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+main .product-cards-container .product-detail-card .reloj{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../iconos/reloj.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.6rem;
+}
+main .product-cards-container .product-detail-card .product-card-title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;    
+    color: var(--just-white);
+    margin-bottom: 1rem;
+}
+main .product-cards-container .product-detail-card .product-card-body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+    padding-right: 1.8rem;
+}
+main .product-detail-card-second{
+    position: relative;
+    width:100%;
+    height: 152px;
+    margin-top: 1.6rem;
+    padding-top: 4.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.5rem;
+    background-color: var(--black);
+    box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 0.5rem;
+}
+main .product-detail-card-second .ojo{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../iconos/ojo.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.8rem;
+}
+main .product-detail-card-second .product-card-title{
+    color: var(--just-white);
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+main .product-detail-card-second .product-card-body{
+    color: #808080;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+main .product-detail-card-three{
+    position: relative;
+    color: var(--black);
+    width: 100%;
+    height: 152px;
+    padding-left: 1.6rem;
+    margin-top: 1.6rem;
+    padding-top: 4.8rem;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    box-shadow:0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+main .product-detail-card-three .dollar{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../iconos/signoDollar.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.4rem;
+}
+main .product-detail-card-three .product-card-title{
+    color: var(--just-white);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+}
+main .product-detail-card-three .product-card-body{
+    color: #808080;
+    padding-right: 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+main .product-detail-card-four{
+    position: relative;
+    color: var(--black);
+    width: 100%;
+    height: 152px;
+    padding-left: 1.6rem;
+    margin-top: 1.6rem;
+    padding-top: 4.8rem;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    box-shadow:0px 4px 8px rgba(0, 0, 0, 0.16);   
+}
+main .product-detail-card-four .check{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../iconos/check-circle\ 1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.4rem;
+}
+main .product-detail-card-four .product-card-title{
+    color: var(--just-white);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+}
+main .product-detail-card-four .product-card-body{
+    color: #808080;
+    padding-right: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+/*IMAGEN NARANJA COMODIN*/
+
+main .main-comodin{
+    width: 100%;
+    min-width: 32rem;
+    height: 38.7rem;
+    padding: 6.4rem;
+    text-align: center;
+    background-image: url("https://batatabit.vercel.app/assets/images/bitcoinbaby2x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .main-comodin h2{
+    color: var(--just-white);
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+
+/*SECCION DE PLANES*/
+
+main .main-section-planes{
+    width: 100%;
+    min-width: 320px;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+    background: #E5E5E5;
+}
+main .main-section-planes .section-escoje-tu-plan{
+    width: 100%;
+    padding: 0 1rem;
+    height: auto;
+}
+main .main-section-planes .section-escoje-tu-plan h2{
+    color: var(--warm-black);
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+main .main-section-planes .section-escoje-tu-plan p{
+    color: #757575;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 3.4rem;
+}
+main .main-section-planes .section-plan{
+    position:relative;
+    scroll-snap-align: center;
+    width: 60%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 24.7rem;
+    margin: 0 2rem;
+    color: var(--just-white);
+    background: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 0.8rem;
+    padding-top: 3.1rem;
+}
+main .main-section-planes .section-recomendado{
+    position: absolute;
+    width: 50%;
+    height: 3.1rem;
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--bitcoin-orange);
+    text-align: center;
+    font-family: "inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--just-white);
+    top: -1.5rem;
+    left: calc(50% - 25%);
+}
+main .main-section-planes .section-plan .pago-anual{
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+main .section-plan .plan-card-price{
+    color:#000000;
+    text-align: center;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 6.3rem;
+}
+main .section-plan .plan-card-price .dollar{
+    position:absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    left: calc(50% - 4.5rem);
+    top: 7rem;
+}
+main .main-section-planes .section-plan .section-ahorros{
+    color: #757575;
+    width: 80%;
+    margin: 0 auto;
+    font-family: "inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin-top: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+main .main-section-planes .section-plan .section-escoger-este{
+    position: absolute;
+    border: 0.2rem solid  #F7931A;
+    width: 15.1rem;
+    height: 4.8rem;
+    left: calc(50% - 7.7rem);
+    background: var(--off-white);
+    color: var(--warm-black);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    padding-top: 1.4rem;
+    border-radius: 0.5rem;
+    padding-right: 3rem;
+    text-decoration: none;
+}
+main .main-section-planes .section-plan .section-escoger-este span{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../iconos/flechaDercha.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.2rem;
+    right: 1.5rem;
+}
+
+/*TARJETA N2*/
+
+main .main-section-planes .section-plan2{
+    position:relative;
+    width: 60%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 24.7rem;
+    margin: 0 auto;
+    color: var(--just-white);
+    background: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 0.8rem;
+    padding-top: 3.1rem;
+}
+main .main-section-planes .section-plan2 .pago-anual2{
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+main .section-plan2 .plan-card-price2{
+    color:#000000;
+    text-align: center;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 6.3rem;
+}
+main .section-plan2 .plan-card-price2 .dollar2{
+    position:absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    left: calc(50% - 4.5rem);
+    top: 7rem;
+}
+main .main-section-planes .section-plan2 .section-ahorros2{
+    color: #757575;
+    width: 80%;
+    margin: 0 auto;
+    font-family: "inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin-top: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+main .main-section-planes .section-plan2 .section-escoger-este2{
+    position: absolute;
+    border: 0.2rem solid  #1a29f7;
+    width: 15.1rem;
+    height: 4.8rem;
+    left: calc(50% - 7.7rem);
+    background: var(--off-white);
+    color: var(--warm-black);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    padding-top: 1.4rem;
+    border-radius: 0.5rem;
+    padding-right: 3rem;
+    text-decoration: none;
+}
+main .main-section-planes .section-plan2 .section-escoger-este2 span{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../iconos/flechaDercha.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.2rem;
+    right: 1.5rem;
+}
+
+/*TARJETA N3*/
+
+main .main-section-planes .section-plan3{
+    position:relative;
+    width: 60%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 24.7rem;
+    margin: 0 auto;
+    color: var(--just-white);
+    background: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 0.8rem;
+    padding-top: 3.1rem;
+}
+main .main-section-planes .section-plan3 .pago-anual3{
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+main .section-plan3 .plan-card-price3{
+    color:#000000;
+    text-align: center;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 6.3rem;
+}
+main .section-plan3 .plan-card-price3 .dollar3{
+    position:absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    left: calc(50% - 5.6rem);
+    top: 7rem;
+}
+main .main-section-planes .section-plan3 .section-ahorros3{
+    color: #757575;
+    width: 80%;
+    margin: 0 auto;
+    font-family: "inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin-top: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+main .main-section-planes .section-plan3 .section-escoger-este3{
+    position: absolute;
+    border: 0.2rem solid  purple;
+    width: 15.1rem;
+    height: 4.8rem;
+    left: calc(50% - 7.7rem);
+    background: var(--off-white);
+    color: var(--warm-black);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    padding-top: 1.4rem;
+    border-radius: 0.5rem;
+    padding-right: 3rem;
+    text-decoration: none;
+}
+main .main-section-planes .section-plan3 .section-escoger-este3 span{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../iconos/flechaDercha.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 1.2rem;
+    right: 1.5rem;
+}
+
+/*SCROLL DE LAS TARJETAS*/
+
+main .main-section-planes .card-slider{
+    display: flex;
+    height: 28rem;
+    padding-top: 1.6rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+/*FOOTER*/
+
+footer{
+    background: var(--bitcoin-orange);
+    display: grid;
+    width: 100%;
+    height: 15rem;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+footer .footer-links{
+    display: flex;
+    justify-content: center;
+}
+footer .footer-links li{
+    color:var(--just-white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    padding-bottom: 0.8rem;
+    text-align: left;
+}
+footer .footer-links .links{
+    margin-top: 4rem;
+    list-style: none;
+}
+footer .batatacopy{
+    display:flex;
+    justify-content: center;
+}
+footer .batatacopy span{
+    width: 9rem;
+    height: 7rem;
+    margin-top: 5.1rem;
+    background-image: url("../iconos/patatacopy.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,42 @@
+header img{
+    width: 300px;
+    height: 48px;
+}
+main .main-tables-container{
+    justify-content: center;
+}
+main .main-container-tabla-2{
+    margin: 0px 0px;
+}
+main .product-cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1024px;
+    
+}
+main .product-cards-container .product-detail-card{
+    margin-top: 0rem;
+    width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+main .product-detail-card-second{
+    margin-top: 0rem;
+    width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+main .product-detail-card-three{
+    margin-top: 0rem;
+    width: 40rem;
+    margin: 0 auto;
+}
+main .product-detail-card-four{
+    margin-top: 0rem;
+    width: 40rem;
+    margin: 0 auto;
+}
+main .main-comodin h2{
+    font-size: 4rem;
+}
